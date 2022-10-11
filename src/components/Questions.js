@@ -13,7 +13,7 @@ const Questions = ({ item, index }) => {
 
     return (
         <div className="card-body">
-            <p>Question {index + 1}: {question}</p>
+            <p className='text-primary'><b> Question {index + 1}:</b> {question}</p>
             <div className='divider'></div>
             <div className="grid grid-cols-1 gap-3">
                 {
