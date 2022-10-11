@@ -16,7 +16,6 @@ const Home = () => {
                     <div className='px-10 text-center lg:text-left'>
                         <h1 className="text-5xl font-bold">Test Your Brain !</h1>
                         <p className="py-6">Better idea of how well they are grasping the material, hopefully motivating them to study more and helping them allocate their study time effectively by focusing on the information that still needs more practice.</p>
-                        <button className="btn btn-primary">Get Started</button>
                     </div>
                 </div>
             </div>

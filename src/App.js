@@ -7,6 +7,8 @@ import 'swiper/css';
 import './App.css';
 import Blogs from './pages/Blogs/Blogs';
 import Statices from './pages/Statices/Statices';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
@@ -37,6 +39,7 @@ function App() {
         {
           path: '/statices',
           element: <Statices />,
+          loader: () => fetch(`https://openapi.programming-hero.com/api/quiz`)
         },
       ]
     },
@@ -46,6 +49,7 @@ function App() {
 
   return (
     <div>
+      <ToastContainer />
       <RouterProvider router={router}></RouterProvider>
     </div>
   );

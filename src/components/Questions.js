@@ -1,18 +1,20 @@
 import React from 'react';
 import { FaEye } from 'react-icons/fa';
+import { toast } from 'react-toastify';
+
 
 const Questions = ({ item, index }) => {
     const { question, options, correctAnswer } = item;
 
     const showCorrectAns = () => {
-
+        toast.success(correctAnswer, { theme: "dark", });
     }
 
     const handleCheck = (option) => {
         if (correctAnswer === option) {
-            console.log('Correct Answer');
+            toast.success('Correct Answer', { theme: "dark", });
         } else {
-            console.log('Wrong Answer');
+            toast.error('Wrong Answer', { theme: "dark", });
         }
     }
 
