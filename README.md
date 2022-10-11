@@ -1,6 +1,6 @@
 # QuizPlay
 
-## Livesite [QuizPlay]()
+## Livesite [QuizPlay](https://meek-trifle-2d317e.netlify.app/)
 
 ## This is a Quiz website. You show many question in quiz. 
 
