@@ -9,16 +9,22 @@ function App() {
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <Main></Main>,
+      element: <Main />,
       children: [
         {
           path: '/',
-          loader: () => fetch('tshirts.json'),
-          element: <Home />
+          element: <Home />,
+          loader: () => fetch(`https://openapi.programming-hero.com/api/quiz`)
+        },
+        {
+          path: '/home',
+          element: <Home />,
+          loader: () => fetch(`https://openapi.programming-hero.com/api/quiz`)
         },
         {
           path: '/quiz/:id',
-          element: <Quiz />
+          element: <Quiz />,
+          loader: ({ params }) => fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`)
         },
       ]
     },
