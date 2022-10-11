@@ -1,7 +1,12 @@
 import React from 'react';
+import { FaEye } from 'react-icons/fa';
 
 const Questions = ({ item, index }) => {
     const { question, options, correctAnswer } = item;
+
+    const showCorrectAns = () => {
+
+    }
 
     const handleCheck = (option) => {
         if (correctAnswer === option) {
@@ -13,7 +18,13 @@ const Questions = ({ item, index }) => {
 
     return (
         <div className="card-body">
+            <div className='flex justify-end'>
+                <span className="tooltip tooltip-left" data-tip="Show Correct Answer">
+                    <FaEye onClick={() => showCorrectAns()} className="w-6 h-6 text-white hover:text-primary " />
+                </span>
+            </div>
             <p className='text-primary'><b> Question {index + 1}:</b> {question}</p>
+
             <div className='divider'></div>
             <div className="grid grid-cols-1 gap-3">
                 {
