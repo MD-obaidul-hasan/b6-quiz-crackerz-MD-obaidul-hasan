@@ -4,6 +4,7 @@ import bannerImg from '../../asset/banner.jpg'
 
 const Home = () => {
     const { data } = useLoaderData();
+
     const navigate = useNavigate();
 
     return (
@@ -27,9 +28,9 @@ const Home = () => {
                         <figure><img className='bg-neutral' src={item?.logo} alt="Shoes" /></figure>
                         <div className="card-body">
                             <h2 className="card-title">{item?.name}</h2>
-                            <p>Total Questions: {item.total}</p>
+                            <p>Total Questions: {item?.total}</p>
                             <div className="card-actions justify-end">
-                                <button onClick={() => navigate(`/quiz/${item.id}`)} className='btn btn-primary'>Start Quiz</button>
+                                <button onClick={() => navigate(`/quiz/${item?.id}`)} className='btn btn-primary'>Start Quiz</button>
                             </div>
                         </div>
                     </div>)
